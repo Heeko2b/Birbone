@@ -1,0 +1,293 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.birbone {
+  display: inline-block;
+  font-size: 43px;
+}
+img {
+  height: 40vh;
+}
+.red {
+  color: #fe1b00;
+  margin-left: -4px;
+}
+
+.title-header {
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+header {
+  width: 100%;
+}
+
+.titre {
+  padding: 10px;
+}
+/* Style de la navbar */
+nav {
+  background-color: #efeff0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+nav li {
+  margin: 0 10px;
+}
+nav a {
+  text-decoration: none;
+  color: black;
+  font-size: 22px;
+}
+
+/* Style des bannières */
+.banner.red {
+  background-color: #fe1b00;
+  color: black;
+  font-size: 24px;
+  text-align: center;
+  margin: 10px;
+  padding: 5px;
+}
+
+.banner.brown {
+  background-color: #fe1b00;
+  color: black;
+  font-size: 32px;
+  text-align: center;
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-evenly;
+  height: min-content;
+}
+.banner.brown p {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#imgbanniere {
+  background-image: url("img/imgbanniere.png");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 2;
+  width: 30vw;
+  height: 40vh;
+}
+
+/* Style pour les produits */
+.produits {
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+  grid-gap: 16px;
+  margin: 50px;
+}
+.barre {
+  text-decoration: line-through;
+}
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 29vh;
+}
+section p a {
+  color: black;
+  text-decoration: none;
+}
+/* Rajout de px pour compenser le -4px du red */
+section .red {
+  margin-left: 4px;
+}
+h1 .red {
+  margin-left: 1px;
+}
+
+.produits .btn,
+.btn-primary {
+  align-self: flex-end;
+  position: relative;
+  top: -5vh;
+}
+.card-body {
+  display: flex;
+}
+footer .card-body a {
+  color: black;
+  text-decoration: none;
+}
+/* Produit.html */
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.images {
+  display: flex;
+}
+.mini {
+  display: grid;
+  grid-template-columns: repeat(1, 10%);
+  grid-gap: 16px;
+  margin-top: 50px;
+  margin-left: 50px;
+  margin-right: 25px;
+  width: 10vh;
+}
+.mini img {
+  height: 10vh;
+}
+.big {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.description {
+  padding-left: 20px;
+  width: 50vh;
+}
+.prixproduit {
+  color: #fe1b00;
+}
+.stars {
+  display: flex;
+  flex-direction: row;
+  width: 12vh;
+}
+.couleurproduit {
+  display: flex;
+  flex-direction: row;
+  width: 20vh;
+}
+.couleurproduit img {
+  height: 10vh;
+}
+.tailleproduit .btn {
+  background-color: #efeff0;
+  color: black;
+  margin-top: 10px;
+}
+.dropdown-menu {
+  font-weight: bold;
+}
+.panierproduit {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.detailsproduit {
+  width: 25vw;
+}
+
+/* Who.html */
+.apropos {
+  background-color: #efeff0;
+  margin-left: 10vw;
+  margin-right: 10vw;
+}
+.apropos h1 {
+  text-align: center;
+}
+
+/* Responsive styles */
+@media (max-width: 1064px) {
+  .produits {
+    grid-template-columns: repeat(2, 50%);
+    justify-items: center;
+  }
+  .mini {
+    display: grid;
+    grid-template-columns: repeat(1, 10%);
+    grid-gap: 16px;
+    margin-top: 50px;
+    margin-left: 20px;
+    margin-right: 0px;
+    width: 10vh;
+  }
+  .description section {
+    width: 20vh;
+  }
+}
+@media (max-width: 654px) {
+  .description section {
+    width: 20vh;
+  }
+}
+@media (max-width: 600px) {
+  #burger {
+    display: block;
+    position: relative;
+    top: 1vh;
+  }
+  nav {
+    justify-content: flex-end;
+    background-color: #ffffff;
+    flex-wrap: wrap; /* Allow the items to wrap to the next line */
+  }
+  nav ul#nav-fs {
+    display: none; /* Hide the tabs */
+    justify-content: center;
+  }
+  nav ul {
+    list-style: initial;
+    flex-direction: column;
+  }
+  .burger-menu {
+    background-color: #efeff0;
+    display: block; /* Show the burger menu */
+    margin-left: 20px;
+    padding: 3px;
+    cursor: pointer; /* Add a pointer cursor */
+  }
+  .line {
+    width: 30px;
+    height: 2px;
+    margin: 5px 0;
+    background-color: black;
+  }
+  .mini {
+    display: none;
+  }
+}
+@media (max-width: 578px) {
+  .produits {
+    grid-template-columns: repeat(1, 100%);
+    justify-items: center;
+  }
+  .banner.brown {
+    flex-direction: column;
+    align-items: center;
+  }
+  #imgbanniere {
+    width: 90vw;
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .images {
+    display: flex;
+    justify-content: center;
+  }
+  .description section {
+    width: 50vh;
+  }
+  .detailsproduit .card {
+    width: 24rem;
+  }
+  #footerproduit {
+    width: 52vh;
+  }
+}
